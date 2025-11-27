@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+
+spring:
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://root:root@localhost:3306/woodshop_db}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      url: ${REDIS_URL:redis://localhost:6379}
+
+app:
+  time:
+    expiryTime: 3600 #giây
+
+key:
+  jwt:
+    value: ${KEY_JWT:12345678901234567890123456789012}
+
